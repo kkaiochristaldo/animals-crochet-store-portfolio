@@ -1,8 +1,13 @@
 import '../styles/globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Saira } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const saira = Saira(
+   {
+      weight: [ '300', '400', '500', '600'],
+      subsets: ['latin']
+   }
+)
 
 export const metadata: Metadata = {
   title: 'Crochet Animals Store',
@@ -16,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body className={saira.className}>
          {children}
       </body>
     </html>
